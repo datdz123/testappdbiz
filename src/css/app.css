@@ -1,0 +1,109 @@
+.page {
+  padding: 16px 16px 96px 16px;
+}
+
+.section-container {
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.zaui-list-item {
+  cursor: pointer;
+}
+.custom-text{
+  font-weight: 600;
+}
+.custom-layout{
+
+  padding: 0px 15px 0px 15px;
+  margin:auto !important;
+}
+.custom-button.bg-green-button{
+  width: 100%;
+  background-color: #09B610CC !important;
+
+}
+.custom-icon{
+  top:43px;
+  color: #000000 !important;
+}
+.custom-rounded{
+  display: flex;
+  width: 100%;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: #13AF55;
+  border-radius: 0 0 20px 20px; /* Bo tròn hai góc phía dưới */
+}
+.layout .custom-button{
+  display: flex;
+  width: 100%;
+  height: 81px;
+  padding: 5px 6px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #FFF;
+  z-index: 2;
+  margin-top: -30px;
+}
+.layout .custom-button .button{
+  display: flex;
+  width: 100%;
+  height: 71px;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #F1FBF5;
+}
+.custom-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.layout .custom-frame{
+  display: flex;
+  width: 100%;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  background: var(--Color---Primary-gradient, linear-gradient(132deg, #098E42 -5.53%, #1EBE25 100%));
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.20) inset;
+  margin-top :10px;
+}
+.custom-frame .custom-text{
+  color: #FFFFFF;
+  font-size: 10px;
+}
+
+.custom-frame.custom-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.custom-flex1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.custom-display{
+  border-radius: 10px;
+  border: 1px solid #9090AD;
+  background: #FFF;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  height: 65px;
+
+}
+
