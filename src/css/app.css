@@ -23,7 +23,10 @@
 .custom-button.bg-green-button{
   width: 100%;
   background-color: #09B610CC !important;
-
+}
+.bg-xam-button{
+  background-color: #BFBEBE !important;
+  color: #FFFFFF;
 }
 .custom-icon{
   top:43px;
