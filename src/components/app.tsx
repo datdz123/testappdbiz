@@ -8,6 +8,7 @@ import Form from "../pages/form";
 import User from "../pages/user";
 import LoginForm from "../pages/Login/LoginForm";
 import Display from "../pages/Login/Display";
+import Home from "../pages/HomeScreen/Home";
 
 const MyApp = () => {
   return (
@@ -16,7 +17,7 @@ const MyApp = () => {
         <SnackbarProvider>
           <ZMPRouter>
             <AnimationRoutes>
-              <Route path="/" element={<Display></Display>}></Route>
+              <Route path="/" element={<Home></Home>}></Route>
               <Route path="/Loginform" element={<LoginForm></LoginForm>}></Route>
               <Route path="/HomePage" element={<HomePage></HomePage>}></Route>
               <Route path="/about" element={<About></About>}></Route>
