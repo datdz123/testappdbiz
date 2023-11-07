@@ -7,6 +7,7 @@ function PopupDangky1({visible,onClose}) {
         navigate('/Loginform');
     };
     return (
+
         <Sheet
             visible={visible}
             onClose ={onClose}

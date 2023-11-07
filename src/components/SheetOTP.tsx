@@ -12,7 +12,6 @@ function SheetOTP({visible,onClose}) {
     const handleOtpChange = (value) => {
         const otpChange = value.target.value;
         setOtpValue(otpChange);
-
         // Thay đổi lớp CSS của nút dựa trên trạng thái đã nhập hay chưa
         if (otpChange === '') {
             setButtonClass('bg-xam-button');
@@ -22,6 +21,21 @@ function SheetOTP({visible,onClose}) {
             setButtonClass('custom-button bg-green-button');
         }
     };
+    useEffect(() => {
+
+            const decreaseCountdown = () => {
+                if (countdown > 0) {
+                    setCountdown(countdown - 1);
+                }
+            };
+            const countdownInterval = setInterval(decreaseCountdown, 1000);
+
+            // Hủy interval khi component unmount hoặc khi actionSheet3 thay đổi
+            return () => {
+                clearInterval(countdownInterval);
+            };
+
+    }, [countdown]);
 
 
     const isButtonEnabled = phoneNumber !== '';
@@ -33,25 +47,15 @@ function SheetOTP({visible,onClose}) {
 
     useEffect(() => {
         if (actionSheetDangky) {
-
-            const decreaseCountdown = () => {
-                if (countdown > 0) {
-                    setCountdown(countdown - 1);
-                }
-            }
-            const countdownInterval = setInterval(decreaseCountdown, 1000);
-
-            // Hủy interval khi component unmount hoặc khi actionSheetDangky thay đổi
-            return () => {
-                clearInterval(countdownInterval);
-            };
+            onClose();
         }
-    }, [actionSheetDangky, countdown]);
+    }, [actionSheetDangky,onClose]);
+
 
 
 
     return (
-        <Page>
+        <>
         <Sheet
             visible={visible}
             onClose={onClose}
@@ -83,6 +87,7 @@ function SheetOTP({visible,onClose}) {
                         className={buttonClass}
                         onClick={() => {
                             setactionSheetDangky(true);
+
                         }}
                     >
                         Tiếp tục
@@ -93,7 +98,7 @@ function SheetOTP({visible,onClose}) {
             </Box>
         </Sheet>
             <SheetDangky visible={actionSheetDangky} onClose={() => setactionSheetDangky(false)} />
-        </Page>
+        </>
     );
 }
 export default SheetOTP;

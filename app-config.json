@@ -1,16 +1,5 @@
 {
   "app": {
-    "title": "TestAppDbiz",
-    "headerTitle": "TestAppDbiz",
-    "headerColor": "#1843EF",
-    "textColor": "white",
-    "textAlign": "left",
-    "statusBarColor": "#1843EF",
-    "leftButton": "back",
-    "statusBar": "normal",
-    "actionBarHidden": false,
-    "hideAndroidBottomNavigationBar": false,
-    "hideIOSSafeAreaBottom": false
   },
   "debug": false,
   "pages": [],

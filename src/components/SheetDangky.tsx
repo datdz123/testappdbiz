@@ -1,11 +1,11 @@
 import React, {useState,useEffect} from 'react';
-import {Box, Button, Checkbox, Icon, Input, Page, Select, Sheet, Text} from "zmp-ui";
+import {Box, Button, Checkbox, Icon, Input, Page, Select, Sheet, Text, useNavigate} from "zmp-ui";
 
 function SheetDangky({visible, onClose}) {
     const { OtpGroup, Option } = Select;
     const [actionSheetDangky, setactionSheetDangky] = useState(true);
     const [buttonClass, setButtonClass] = useState('bg-xam-button');
-
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         fullName: '',
         address: '',
@@ -55,7 +55,7 @@ function SheetDangky({visible, onClose}) {
 
     return (
 
-        <Page>
+     <>
             <Sheet
                 visible={visible}
                 onClose={onClose}
@@ -142,14 +142,20 @@ function SheetDangky({visible, onClose}) {
                     </Select>
                 </div>
                     <Box my={10}>
-                    <Button  size="large" className= {buttonClass}>
+                    <Button
+                        size="large" className= {buttonClass}
+                        onClick={() => {
+
+                            navigate('/Home');
+                        }}
+                        >
                         Tiếp tục
                     </Button>
 
                 </Box>
                 </Box>
             </Sheet>
-        </Page>
+     </>
 
     );
 }
