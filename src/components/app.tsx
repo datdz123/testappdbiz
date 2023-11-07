@@ -18,7 +18,6 @@ const MyApp = () => {
             <AnimationRoutes>
               <Route path="/" element={<Display></Display>}></Route>
               <Route path="/Loginform" element={<LoginForm></LoginForm>}></Route>
-
               <Route path="/HomePage" element={<HomePage></HomePage>}></Route>
               <Route path="/about" element={<About></About>}></Route>
               <Route path="/form" element={<Form></Form>}></Route>

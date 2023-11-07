@@ -1,10 +1,10 @@
-import React,{useState} from 'react';
-import {Box, Button, Input, Sheet, Text, useNavigate,} from "zmp-ui";
+import React,{useState,useEffect} from 'react';
+import {Box, Button, Input, Page, Sheet, Text, useNavigate,} from "zmp-ui";
 import SheetOTP from "./SheetOTP";
 
 function PopupDangky2({visible,onClose}) {
-    const [actionSheet2, setActionSheet2] = React.useState(false);
-    const [actionSheet3, setActionSheet3] = React.useState(true);
+    const [actionSheet2, setActionSheet2] = useState(false);
+    const [actionSheet3, setActionSheet3] = useState(false);
     const [phoneNumber, setPhoneNumber] = useState('');
     const [buttonClass, setButtonClass] = useState('bg-xam-button');
 
@@ -25,8 +25,14 @@ function PopupDangky2({visible,onClose}) {
     const navigateToLoginForm = () => {
         navigate('/Loginform');
     };
+    useEffect(() => {
+        if (actionSheet3) {
+            // Nếu SheetOTP được mở, thì đóng Sheet trong PopupDangky2
+            onClose();
+        }
+    }, [actionSheet3, onClose]);
     return (
-
+<Page>
         <Sheet
             visible={visible}
             onClose ={onClose}
@@ -40,14 +46,20 @@ function PopupDangky2({visible,onClose}) {
                 </Text.Title>
             </Box>
             <Box flex flexDirection="column" >
+
                 <div style={{ flex: 1 }} className=" pt-5" >
                     <img className="m-auto py-3 w-[80%]" src='assets-src/image/dangky.svg' />
-                    <Box px={5}>
-                    <Input label="Số điện thoại" type={"number"}
-                           value={phoneNumber}
-                           onChange={handlePhoneNumberChange}/>
-                    </Box>
                 </div>
+
+                <div  className="input-container ">
+                    <input type="number" id="phone"
+                           placeholder={" Nhập số điện thoại"}
+                           value={phoneNumber}
+                           onChange={handlePhoneNumberChange}
+                    />
+                    <label htmlFor="phone " className={"text-black text-[14px]"}>Số điện thoại *</label>
+                </div>
+
                 <div style={{ flex: 1 }}  className={"pt-10 pb-10 px-5"}>
                     <Button
                         onClick={() => {
@@ -63,8 +75,9 @@ function PopupDangky2({visible,onClose}) {
             </Box>
         </Sheet>
 
+    <SheetOTP visible={actionSheet3} onClose={() => setActionSheet3(false)} />
 
-
+</Page>
     );
 }
 

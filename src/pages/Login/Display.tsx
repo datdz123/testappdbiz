@@ -120,10 +120,7 @@ function Display(props) {
                 visible={actionSheet2}
                 onClose={() => setActionSheet2(false)}
             />
-            <SheetOTP
-                visible={actionSheet3}
-                onClose={() => setActionSheet3(false)}
-            />
+
         </Page>
     );
 }
