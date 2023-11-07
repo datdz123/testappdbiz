@@ -8,6 +8,15 @@
   border-radius: 8px;
   margin-bottom: 24px;
 }
+.customHome{
+  border-radius: 12px;
+border: 1px solid var(--Color---Primary-gradient, #098E42);
+padding: 6px;
+background: #FFF;
+
+/* 12 */
+box-shadow: 0px 0px 8px 0px rgba(19, 175, 85, 0.08);
+}
 
 .zaui-list-item {
   cursor: pointer;
@@ -16,9 +25,12 @@
   font-weight: 600;
 }
 .custom-layout{
-
   padding: 0px 15px 0px 15px;
   margin:auto !important;
+}
+.custom-layoutHome{
+  padding: 0px 15px 0px 15px;
+
 }
 .custom-button.bg-green-button{
   width: 100%;
