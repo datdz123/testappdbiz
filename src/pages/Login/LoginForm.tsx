@@ -14,10 +14,13 @@ function LoginForm() {
             <img className="m-auto py-3 w-[142px] h-[81px]" src='assets-src/image/bg.svg' />
         </Box>
         <Box className=" h-full">
-            <Input label="Số điện thoại" type={"number"} />
-            <Input.Password label="Mật khẩu" visibilityToggle />
+            <Input label="Số điện thoại" type={"number"}
+            placeholder={"Nhập số điện thoại "}/>
+            <Input.Password label="Mật khẩu" visibilityToggle
+                            placeholder={"Nhập mật khẩu "}/>
             <div className="flex items-center justify-center mt-4">
-                <Button size="large" className=" custom-button bg-green-button rounded-[15px] ">
+                <Button size="large" className=" custom-button bg-green-button rounded-[15px] "
+                        onClick={() => navigate('/Home')}>
                    Đăng nhập
                 </Button>
             </div>

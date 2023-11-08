@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Box, Button, Input, Page, Sheet, Text, useNavigate,} from "zmp-ui";
+import {Box, Button, Icon, Input, Page, Sheet, Text, useNavigate,} from "zmp-ui";
 import SheetOTP from "./SheetOTP";
 
 function PopupDangky2({visible, onClose}) {
@@ -43,11 +43,14 @@ function PopupDangky2({visible, onClose}) {
                 mask
                 handler
                 swipeToClose
+
             >
-                <Box className={""}>
+                <Box className={"relative"}>
+                    <Box className={"absolute right-[25px]"}>  <Icon icon={"zi-close"} ></Icon></Box>
                     <Text.Title className={"text-center "}>
                         Đăng ký
                     </Text.Title>
+
                 </Box>
                 <Box flex flexDirection="column">
 

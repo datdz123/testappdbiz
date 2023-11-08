@@ -18,7 +18,7 @@ function Display(props) {
                 <Box className={"layout flex flex-col items-center justify-center custom-layout"}>
                     <Box className={"custom-button"}>
                         <Box className="button flex flex-row">
-                            <Box className="custom-flex">
+                            <Box className="custom-flex"   onClick={() => setActionSheetOpened(true)}>
                                 <img className={"mr-2"} src='assets-src/image/user.svg'/>
                                 <Text className={"text-[#000] custom-text"}> Đăng nhập </Text>
                             </Box>

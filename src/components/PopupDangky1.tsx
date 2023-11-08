@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Button, Sheet, Page, Text,useNavigate } from "zmp-ui";
+import {Box, Button, Sheet, Page, Text, useNavigate, Icon} from "zmp-ui";
 function PopupDangky1({visible,onClose}) {
     const [actionSheetOpened, setActionSheetOpened] = React.useState(false);
     const  navigate = useNavigate();
@@ -15,7 +15,8 @@ function PopupDangky1({visible,onClose}) {
             handler
             swipeToClose
         >
-            <Box className={""}>
+            <Box className={"relative"}>
+                <Box className={"absolute right-[25px]"}>  <Icon icon={"zi-close"} ></Icon></Box>
                 <Text.Title className={"text-center "}>
                     Yêu cầu đăng nhập
                 </Text.Title>

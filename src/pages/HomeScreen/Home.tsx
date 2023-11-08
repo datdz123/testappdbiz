@@ -12,7 +12,7 @@ function HomePage (props)  {
             <Header />
         <Page  className="">
 
-            <Box px={5}>
+            <Box px={5} className={"layout"}>
                 <Box flex flexDirection='row' mt={4} m={12} className={" gap-8 justify-center text-[12px]"}>
                     <Box flex flexDirection='column' className='customHome'>
                         <Box flex flexDirection='row' alignItems='center' >

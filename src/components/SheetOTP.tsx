@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Box, Button, Input, Page, Sheet, Text, useNavigate} from "zmp-ui";
+import {Box, Button, Icon, Input, Page, Sheet, Text, useNavigate} from "zmp-ui";
 import SheetDangky from "./SheetDangky";
 
 function SheetOTP({visible,onClose}) {
@@ -63,8 +63,10 @@ function SheetOTP({visible,onClose}) {
             handler
             swipeToClose
         >
-            <Box className={""}>
-                <Text.Title className={"text-center "}>
+            <Box className={"relative"}>
+                <Box className={"absolute right-[25px]"}>  <Icon icon={"zi-close"} ></Icon></Box>
+                <Text.Title className={"text-center  "}>
+
                     Đăng ký
                 </Text.Title>
             </Box>
@@ -72,7 +74,11 @@ function SheetOTP({visible,onClose}) {
                 <div style={{ flex: 1 }} className=" pt-5" >
                     <Text className={"text-center"}> Mã xác thực đã được gửi va zns của Zalo </Text>
                     <Box px={5}>
-                        <Input.OTP
+                        <Input.OTP  style={{
+                            border: '2px solid #09B610',
+                            borderRadius: '5px',
+                            background: '#FFF',
+                        }}
                             show
                             otpLength={6}
                             onChange={handleOtpChange}
